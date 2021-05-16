@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 196,
+  "end": 240,
   "body": [
     {
       "type": "ImportDeclaration",
@@ -31,47 +31,106 @@
     {
       "type": "ImportDeclaration",
       "start": 20,
-      "end": 43,
+      "end": 48,
       "specifiers": [
         {
-          "type": "ImportDefaultSpecifier",
+          "type": "ImportNamespaceSpecifier",
           "start": 27,
-          "end": 31,
+          "end": 36,
           "local": {
             "type": "Identifier",
-            "start": 27,
-            "end": 31,
-            "name": "path"
+            "start": 32,
+            "end": 36,
+            "name": "http"
           }
         }
       ],
       "source": {
         "type": "Literal",
-        "start": 37,
-        "end": 43,
+        "start": 42,
+        "end": 48,
+        "value": "http",
+        "raw": "'http'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 49,
+      "end": 87,
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 56,
+          "end": 60,
+          "local": {
+            "type": "Identifier",
+            "start": 56,
+            "end": 60,
+            "name": "path"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 64,
+          "end": 68,
+          "imported": {
+            "type": "Identifier",
+            "start": 64,
+            "end": 68,
+            "name": "join"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 64,
+            "end": 68,
+            "name": "join"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 70,
+          "end": 73,
+          "imported": {
+            "type": "Identifier",
+            "start": 70,
+            "end": 73,
+            "name": "sep"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 70,
+            "end": 73,
+            "name": "sep"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "start": 81,
+        "end": 87,
         "value": "path",
         "raw": "'path'"
       }
     },
     {
       "type": "VariableDeclaration",
-      "start": 45,
-      "end": 57,
+      "start": 89,
+      "end": 101,
       "declarations": [
         {
           "type": "VariableDeclarator",
-          "start": 49,
-          "end": 57,
+          "start": 93,
+          "end": 101,
           "id": {
             "type": "Identifier",
-            "start": 49,
-            "end": 52,
+            "start": 93,
+            "end": 96,
             "name": "res"
           },
           "init": {
             "type": "Literal",
-            "start": 55,
-            "end": 57,
+            "start": 99,
+            "end": 101,
             "value": "",
             "raw": "''"
           }
@@ -81,12 +140,12 @@
     },
     {
       "type": "FunctionDeclaration",
-      "start": 59,
-      "end": 170,
+      "start": 103,
+      "end": 214,
       "id": {
         "type": "Identifier",
-        "start": 68,
-        "end": 76,
+        "start": 112,
+        "end": 120,
         "name": "readFile"
       },
       "expression": false,
@@ -95,42 +154,42 @@
       "params": [],
       "body": {
         "type": "BlockStatement",
-        "start": 79,
-        "end": 170,
+        "start": 123,
+        "end": 214,
         "body": [
           {
             "type": "ExpressionStatement",
-            "start": 83,
-            "end": 154,
+            "start": 127,
+            "end": 198,
             "expression": {
               "type": "AssignmentExpression",
-              "start": 83,
-              "end": 154,
+              "start": 127,
+              "end": 198,
               "operator": "=",
               "left": {
                 "type": "Identifier",
-                "start": 83,
-                "end": 86,
+                "start": 127,
+                "end": 130,
                 "name": "res"
               },
               "right": {
                 "type": "CallExpression",
-                "start": 89,
-                "end": 154,
+                "start": 133,
+                "end": 198,
                 "callee": {
                   "type": "MemberExpression",
-                  "start": 89,
-                  "end": 104,
+                  "start": 133,
+                  "end": 148,
                   "object": {
                     "type": "Identifier",
-                    "start": 89,
-                    "end": 91,
+                    "start": 133,
+                    "end": 135,
                     "name": "fs"
                   },
                   "property": {
                     "type": "Identifier",
-                    "start": 92,
-                    "end": 104,
+                    "start": 136,
+                    "end": 148,
                     "name": "readFileSync"
                   },
                   "computed": false
@@ -138,46 +197,62 @@
                 "arguments": [
                   {
                     "type": "CallExpression",
-                    "start": 105,
-                    "end": 144,
+                    "start": 149,
+                    "end": 188,
                     "callee": {
-                      "type": "MemberExpression",
-                      "start": 105,
-                      "end": 114,
-                      "object": {
-                        "type": "Identifier",
-                        "start": 105,
-                        "end": 109,
-                        "name": "path"
-                      },
-                      "property": {
-                        "type": "Identifier",
-                        "start": 110,
-                        "end": 114,
-                        "name": "join"
-                      },
-                      "computed": false
+                      "type": "Identifier",
+                      "start": 149,
+                      "end": 153,
+                      "name": "join"
                     },
                     "arguments": [
                       {
                         "type": "Identifier",
-                        "start": 115,
-                        "end": 124,
+                        "start": 154,
+                        "end": 163,
                         "name": "__dirname"
                       },
                       {
-                        "type": "Literal",
-                        "start": 126,
-                        "end": 143,
-                        "value": "../package.json",
-                        "raw": "'../package.json'"
+                        "type": "TemplateLiteral",
+                        "start": 165,
+                        "end": 187,
+                        "expressions": [
+                          {
+                            "type": "Identifier",
+                            "start": 170,
+                            "end": 173,
+                            "name": "sep"
+                          }
+                        ],
+                        "quasis": [
+                          {
+                            "type": "TemplateElement",
+                            "start": 166,
+                            "end": 168,
+                            "value": {
+                              "raw": "..",
+                              "cooked": ".."
+                            },
+                            "tail": false
+                          },
+                          {
+                            "type": "TemplateElement",
+                            "start": 174,
+                            "end": 186,
+                            "value": {
+                              "raw": "package.json",
+                              "cooked": "package.json"
+                            },
+                            "tail": true
+                          }
+                        ]
                       }
                     ]
                   },
                   {
                     "type": "Literal",
-                    "start": 146,
-                    "end": 153,
+                    "start": 190,
+                    "end": 197,
                     "value": "utf-8",
                     "raw": "'utf-8'"
                   }
@@ -187,12 +262,12 @@
           },
           {
             "type": "ReturnStatement",
-            "start": 158,
-            "end": 168,
+            "start": 202,
+            "end": 212,
             "argument": {
               "type": "Identifier",
-              "start": 165,
-              "end": 168,
+              "start": 209,
+              "end": 212,
               "name": "res"
             }
           }
@@ -201,12 +276,12 @@
     },
     {
       "type": "ExportDefaultDeclaration",
-      "start": 172,
-      "end": 195,
+      "start": 216,
+      "end": 239,
       "declaration": {
         "type": "Identifier",
-        "start": 187,
-        "end": 195,
+        "start": 231,
+        "end": 239,
         "name": "readFile"
       }
     }
