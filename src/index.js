@@ -28,12 +28,18 @@ node.body.reverse().forEach((item) => {
   console.log(deftModule, '|', nameAsModule, '|', modules, '\n----')
 
   if (nameAsModule) {
+    // import * as name from
     codeRet = `${statr}const ${nameAsModule} = require(${item.source.raw})${end}`
+  } else if (deftModule && !modules.length) {
+    // import name from 'mod'
+    codeRet = `${statr}const ${deftModule} = require(${item.source.raw})${end}`
+  } else if (deftModule && modules.length) {
+    // import name, { name2, name3 } from 'mod'
+    codeRet = `${statr}const ${deftModule} = require(${item.source.raw})
+const { ${modules.join(', ')} } = ${deftModule}${end}`
   } else {
-    const imported = modules.length
-      ? (deftModule && ', ') + `{ ${modules.join(', ')} }`
-      : ''
-    codeRet = `${statr}const ${deftModule + imported} = require(${item.source.raw})${end}`
+    // import { name1, name2 } from 'mod'
+    codeRet = `${statr}const { ${modules.join(', ')} } = require(${item.source.raw})${end}`
   }
 })
 
