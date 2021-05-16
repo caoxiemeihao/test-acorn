@@ -1,0 +1,13 @@
+{
+  "name": "acorn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "草鞋没号 <wangjiawang580@hellobike.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "dependencies": {
+    "acorn": "^8.2.4"
+  }
+}
